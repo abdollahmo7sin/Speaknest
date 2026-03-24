@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="إنشاء حساب جديد في Speaknest">
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>تسجيل حساب جديد | Speaknest</title>
+</head>
+
+<body>
+
+    <div class="login-page-wrapper">
+
+        <!-- Top Bar -->
+        <div class="container">
+            <div class="login-topbar">
+                <a href="index.html" class="login-sidebar-btn">
+                    <i class="fa-solid fa-angles-right"></i>
+                </a>
+                <a href="register.html" class="login-lang-toggle text-blue">EN</a>
+            </div>
+        </div>
+
+        <!-- Cloud Shape + Content -->
+        <div class="login-cloud-area register-cloud-area">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+
+                    <!-- Form Side (Left side of screen in RTL) -->
+                    <div class="col-lg-6 order-lg-2">
+                        <div class="login-form-container register-form-container">
+
+                            <!-- Title -->
+                            <h1 class="login-title">تسجيل حساب جديد</h1>
+
+                            <!-- Form -->
+                            <form class="login-form" id="registerForm">
+
+                                <!-- Name Field -->
+                                <div class="login-field-group">
+                                    <label class="login-field-label" for="registerName">
+                                        ادخل اسمك
+                                        <span class="register-field-hint">( الزامي حد أدنى 5 حروف وحد اقصي 20 حرف
+                                            )</span>
+                                    </label>
+                                    <div class="login-input-wrapper">
+                                        <span class="login-input-icon"><i class="fa-regular fa-user"></i></span>
+                                        <input type="text" id="registerName" class="login-input"
+                                            placeholder="بدريس وليد" autocomplete="name" minlength="5" maxlength="20"
+                                            >
+                                    </div>
+                                </div>
+
+                                <!-- Email Field -->
+                                <div class="login-field-group">
+                                    <label class="login-field-label" for="registerEmail">
+                                        ادخل البريد الالكتروني
+                                        <span class="register-field-hint">( الزامي ويجب ألا يكون مرتبط بأي حساب آخر
+                                            )</span>
+                                    </label>
+                                    <div class="login-input-wrapper">
+                                        <span class="login-input-icon"><i class="fa-regular fa-envelope"></i></span>
+                                        <input type="email" id="registerEmail" class="login-input"
+                                            placeholder="example@gmail.com" autocomplete="email" >
+                                    </div>
+                                </div>
+
+                                <!-- Password Field -->
+                                <div class="login-field-group">
+                                    <label class="login-field-label" for="registerPassword">
+                                        ادخل كلمة المرور
+                                        <span class="register-field-hint">( حد أدنى 8 أرقام او حروف )</span>
+                                    </label>
+                                    <div class="login-input-wrapper">
+                                        <input type="password" id="registerPassword" class="login-input"
+                                            placeholder="••••••" autocomplete="new-password" minlength="8" >
+                                        <span class="login-input-icon"><i class="fa-solid fa-lock"></i></span>
+                                        <button type="button" class="login-toggle-password" id="toggleRegisterPassword"
+                                            aria-label="إظهار كلمة المرور">
+                                            <i class="fa-regular fa-eye" id="toggleRegPassIcon"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Confirm Password Field -->
+                                <div class="login-field-group">
+                                    <label class="login-field-label" for="registerConfirmPassword">تأكيد كلمة
+                                        المرور</label>
+                                    <div class="login-input-wrapper">
+                                        <input type="password" id="registerConfirmPassword" class="login-input"
+                                            placeholder="*****" autocomplete="new-password" >
+                                        <span class="login-input-icon"><i class="fa-solid fa-lock"></i></span>
+                                        <button type="button" class="login-toggle-password" id="toggleConfirmPassword"
+                                            aria-label="إظهار تأكيد كلمة المرور">
+                                            <i class="fa-regular fa-eye" id="toggleConfirmPassIcon"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+
+ 
+
+                                <!-- Submit Button -->
+                                <button type="button" class="login-submit-btn" id="registerSubmitBtn">
+                                    تسجيل الحساب
+                                </button>
+
+                                <!-- Login Link -->
+                                <p class="login-register-link">
+                                    لديك حساب بالفعل؟ <a href="login.html">تسجيل الدخول</a>
+                                </p>
+
+                            </form>
+
+                        </div>
+                    </div>
+
+                    <!-- Features Side (Right side of screen in RTL) -->
+                    <div class="col-lg-5 order-lg-1">
+                        <div class="register-features">
+                            <ul class="register-features-list">
+                                <li><i class="fa-solid  fa-angle-double-left"></i> "دروس فردية مع نخبة من المعلمين."
+                                </li>
+                                <li><i class="fa-solid  fa-angle-double-left"></i> "نمّ طلاقتك من خلال محادثات واقعية."
+                                </li>
+                                <li><i class="fa-solid  fa-angle-double-left"></i> "مُخصصة بالكامل لتناسب أهدافك."</li>
+                                <li><i class="fa-solid  fa-angle-double-left"></i> "ادفع مقابل كل درس أو اشحن محفظتك
+                                    الإلكترونية."</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Rocket Illustration -->
+            <div class="login-rocket">
+                <img src="images/rocket.png" alt="Rocket illustration">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- OTP Verification Modal -->
+    <div class="modal fade" id="otpModal" tabindex="-1" aria-labelledby="otpModalLabel" aria-hidden="true"
+        data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content otp-modal-content">
+                <button type="button" class="btn-close otp-modal-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body text-center py-50 px-40">
+                    <h5 class="otp-modal-title">أهلاً بك في عائلة SpeakNest!</h5>
+                    <p class="otp-modal-text">
+                        أرسلنا لك رمز التحقق إلى بريدك الإلكتروني: <span class="otp-user-email">example@gmail.com</span>
+                        يرجى إدخال الرمز المكون من 5 أرقام لتفعيل حسابك والبدء في رحلتك التعليمية مع نخبة من المدرسين.
+                    </p>
+
+                    <div class="otp-inputs-wrapper" dir="ltr">
+                        <input type="text" maxlength="1" class="otp-input" inputmode="numeric" placeholder="-">
+                        <input type="text" maxlength="1" class="otp-input" inputmode="numeric" placeholder="-">
+                        <input type="text" maxlength="1" class="otp-input" inputmode="numeric" placeholder="-">
+                        <input type="text" maxlength="1" class="otp-input" inputmode="numeric" placeholder="-">
+                        <input type="text" maxlength="1" class="otp-input" inputmode="numeric" placeholder="-">
+                    </div>
+
+                    <div class="otp-timer">60:00</div>
+
+                    <button type="button" class="otp-resend-btn">إعادة ارسال الكود مرة أخرى</button>
+
+                    <button type="button" class="otp-verify-btn" id="verifyBtn">تحقق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true"
+        data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content otp-modal-content">
+                <button type="button" class="btn-close otp-modal-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body text-center py-50 px-40">
+                    <div class="success-checkmark-wrapper mb-30">
+                        <i class="fa-solid fa-check success-icon"></i>
+                    </div>
+                    <p class="success-modal-text">
+                        تم التسجيل بنجاح وسيتم تحويلك تلقائياً خلال <span id="redirect-timer">3</span> ثواني
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+</body>
+
+</html>

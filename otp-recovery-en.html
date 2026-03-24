@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Register a new account at Speaknest">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Register New Account | Speaknest</title>
+</head>
+
+<body>
+
+    <div class="login-page-wrapper">
+
+        <!-- Top Bar -->
+        <div class="container">
+            <div class="login-topbar">
+                <a href="index-en.html" class="login-sidebar-btn">
+                    <i class="fa-solid fa-angles-left"></i>
+                </a>
+                <a href="otp-recovery-en.html" class="login-lang-toggle text-blue">AR</a>
+            </div>
+        </div>
+
+        <!-- Cloud Shape + Content -->
+        <div class="login-cloud-area register-cloud-area">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+
+                    <!-- Form Side -->
+                    <div class="col-lg-6 order-lg-1">
+                        <div class="login-form-container register-form-container">
+
+                            <!-- Title -->
+                            <h1 class="login-title">Password Recovery</h1>
+
+                            <div class="otp-page-content text-center">
+                                <p class="otp-modal-text fw-700 mb-30">
+                                    example@gmail.com
+                                </p>
+
+                                <div class="otp-inputs-wrapper justify-content-center" dir="ltr">
+                                    <input type="text" maxlength="1" class="otp-input" inputmode="numeric" placeholder="-">
+                                    <input type="text" maxlength="1" class="otp-input" inputmode="numeric" placeholder="-">
+                                    <input type="text" maxlength="1" class="otp-input" inputmode="numeric" placeholder="-">
+                                    <input type="text" maxlength="1" class="otp-input" inputmode="numeric" placeholder="-">
+                                    <input type="text" maxlength="1" class="otp-input" inputmode="numeric" placeholder="-">
+                                </div>
+
+                                <div class="otp-timer">60:00</div>
+
+                                <button type="button" class="otp-resend-btn">Resend code again</button>
+
+                                <button type="button" class="login-submit-btn" id="verifyOtpBtnPage">
+                                    Verify
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Features Side -->
+                    <div class="col-lg-5 order-lg-2">
+                        <div class="register-features">
+                            <ul class="register-features-list">
+                                <li><i class="fa-solid  fa-angle-double-right"></i> "One-on-one lessons with elite teachers."
+                                </li>
+                                <li><i class="fa-solid  fa-angle-double-right"></i> "Develop your fluency through real conversations."
+                                </li>
+                                <li><i class="fa-solid  fa-angle-double-right"></i> "Fully customized to suit your goals."</li>
+                                <li><i class="fa-solid  fa-angle-double-right"></i> "Pay per lesson or top up your e-wallet."</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Rocket Illustration -->
+            <div class="login-rocket">
+                <img src="images/rocket.png" alt="Rocket illustration">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- OTP Verification Modal -->
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true"
+        data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content otp-modal-content">
+                <button type="button" class="btn-close otp-modal-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body text-center py-50 px-40">
+                    <div class="success-checkmark-wrapper mb-30">
+                        <i class="fa-solid fa-check success-icon"></i>
+                    </div>
+                    <p class="success-modal-text">
+                        Verified successfully, and you will be automatically redirected in <span id="redirect-timer">3</span> seconds
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+</body>
+
+</html>

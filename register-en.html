@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Create a new account at Speaknest">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Register New Account | Speaknest</title>
+</head>
+
+<body>
+
+    <div class="login-page-wrapper">
+
+        <!-- Top Bar -->
+        <div class="container">
+            <div class="login-topbar">
+                <a href="index-en.html" class="login-sidebar-btn">
+                    <i class="fa-solid fa-angles-left"></i>
+                </a>
+                <a href="register-en.html" class="login-lang-toggle text-blue">AR</a>
+            </div>
+        </div>
+
+        <!-- Cloud Shape + Content -->
+        <div class="login-cloud-area register-cloud-area">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+
+                    <!-- Form Side -->
+                    <div class="col-lg-6 order-lg-1">
+                        <div class="login-form-container register-form-container">
+
+                            <!-- Title -->
+                            <h1 class="login-title">Register New Account</h1>
+
+                            <!-- Form -->
+                            <form class="login-form" id="registerForm">
+
+                                <!-- Name Field -->
+                                <div class="login-field-group">
+                                    <label class="login-field-label" for="registerName">
+                                        Enter your name
+                                        <span class="register-field-hint">( Mandatory, min 5 chars, max 20 chars )</span>
+                                    </label>
+                                    <div class="login-input-wrapper">
+                                        <span class="login-input-icon"><i class="fa-regular fa-user"></i></span>
+                                        <input type="text" id="registerName" class="login-input"
+                                            placeholder="Bardis Walid" autocomplete="name" minlength="5" maxlength="20"
+                                            >
+                                    </div>
+                                </div>
+
+                                <!-- Email Field -->
+                                <div class="login-field-group">
+                                    <label class="login-field-label" for="registerEmail">
+                                        Enter email address
+                                        <span class="register-field-hint">( Mandatory, must not be linked to another account )</span>
+                                    </label>
+                                    <div class="login-input-wrapper">
+                                        <span class="login-input-icon"><i class="fa-regular fa-envelope"></i></span>
+                                        <input type="email" id="registerEmail" class="login-input"
+                                            placeholder="example@gmail.com" autocomplete="email" >
+                                    </div>
+                                </div>
+
+                                <!-- Password Field -->
+                                <div class="login-field-group">
+                                    <label class="login-field-label" for="registerPassword">
+                                        Enter password
+                                        <span class="register-field-hint">( Min 8 chars or numbers )</span>
+                                    </label>
+                                    <div class="login-input-wrapper">
+                                        <input type="password" id="registerPassword" class="login-input"
+                                            placeholder="••••••" autocomplete="new-password" minlength="8" >
+                                        <span class="login-input-icon"><i class="fa-solid fa-lock"></i></span>
+                                        <button type="button" class="login-toggle-password" id="toggleRegisterPassword"
+                                            aria-label="Show password">
+                                            <i class="fa-regular fa-eye" id="toggleRegPassIcon"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Confirm Password Field -->
+                                <div class="login-field-group">
+                                    <label class="login-field-label" for="registerConfirmPassword">Confirm Password</label>
+                                    <div class="login-input-wrapper">
+                                        <input type="password" id="registerConfirmPassword" class="login-input"
+                                            placeholder="*****" autocomplete="new-password" >
+                                        <span class="login-input-icon"><i class="fa-solid fa-lock"></i></span>
+                                        <button type="button" class="login-toggle-password" id="toggleConfirmPassword"
+                                            aria-label="Show confirm password">
+                                            <i class="fa-regular fa-eye" id="toggleConfirmPassIcon"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+
+ 
+
+                                <!-- Submit Button -->
+                                <button type="button" class="login-submit-btn" id="registerSubmitBtn">
+                                    Register Account
+                                </button>
+
+                                <!-- Login Link -->
+                                <p class="login-register-link">
+                                    Already have an account? <a href="login-en.html">Login</a>
+                                </p>
+
+                            </form>
+
+                        </div>
+                    </div>
+
+                    <!-- Features Side -->
+                    <div class="col-lg-5 order-lg-2">
+                        <div class="register-features">
+                            <ul class="register-features-list">
+                                <li><i class="fa-solid  fa-angle-double-right"></i> "One-on-one lessons with elite teachers."
+                                </li>
+                                <li><i class="fa-solid  fa-angle-double-right"></i> "Develop your fluency through real conversations."
+                                </li>
+                                <li><i class="fa-solid  fa-angle-double-right"></i> "Fully customized to suit your goals."</li>
+                                <li><i class="fa-solid  fa-angle-double-right"></i> "Pay per lesson or top up your e-wallet."</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Rocket Illustration -->
+            <div class="login-rocket">
+                <img src="images/rocket.png" alt="Rocket illustration">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- OTP Verification Modal -->
+    <div class="modal fade" id="otpModal" tabindex="-1" aria-labelledby="otpModalLabel" aria-hidden="true"
+        data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content otp-modal-content">
+                <button type="button" class="btn-close otp-modal-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body text-center py-50 px-40">
+                    <h5 class="otp-modal-title">Welcome to the SpeakNest family!</h5>
+                    <p class="otp-modal-text">
+                        We sent a verification code to your email: <span class="otp-user-email">example@gmail.com</span>
+                        Please enter the 5-digit code to activate your account and start your educational journey with elite teachers.
+                    </p>
+
+                    <div class="otp-inputs-wrapper" dir="ltr">
+                        <input type="text" maxlength="1" class="otp-input" inputmode="numeric" placeholder="-">
+                        <input type="text" maxlength="1" class="otp-input" inputmode="numeric" placeholder="-">
+                        <input type="text" maxlength="1" class="otp-input" inputmode="numeric" placeholder="-">
+                        <input type="text" maxlength="1" class="otp-input" inputmode="numeric" placeholder="-">
+                        <input type="text" maxlength="1" class="otp-input" inputmode="numeric" placeholder="-">
+                    </div>
+
+                    <div class="otp-timer">60:00</div>
+
+                    <button type="button" class="otp-resend-btn">Resend code again</button>
+
+                    <button type="button" class="otp-verify-btn" id="verifyBtn">Verify</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true"
+        data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content otp-modal-content">
+                <button type="button" class="btn-close otp-modal-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body text-center py-50 px-40">
+                    <div class="success-checkmark-wrapper mb-30">
+                        <i class="fa-solid fa-check success-icon"></i>
+                    </div>
+                    <p class="success-modal-text">
+                        Registered successfully, and you will be automatically redirected in <span id="redirect-timer">3</span> seconds
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+</body>
+
+</html>
