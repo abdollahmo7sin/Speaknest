@@ -1,4 +1,7 @@
+const isAr = document.documentElement.lang === 'ar';
+
 jQuery(document).ready(function () {
+
 
 
     // toggle search form
@@ -323,7 +326,10 @@ jQuery(document).ready(function () {
                 // Update success text for password reset
                 const successText = successModalElement.querySelector('.success-modal-text');
                 if (successText) {
-                    successText.innerHTML = 'تم تغيير كلمة المرور بنجاح وسيتم تحويلك تلقائياً خلال <span id="redirect-timer">3</span> ثواني';
+                    const successMsg = isAr
+                        ? 'تم تغيير كلمة المرور بنجاح وسيتم تحويلك تلقائياً خلال <span id="redirect-timer">3</span> ثواني'
+                        : 'Your password has been changed successfully. You will be redirected in <span id="redirect-timer">3</span> seconds.';
+                    successText.innerHTML = successMsg;
                 }
 
                 const successModal = bootstrap.Modal.getOrCreateInstance(successModalElement);
@@ -391,8 +397,8 @@ jQuery(document).ready(function () {
                     .map(cb => cb.value);
                 if (display) {
                     display.textContent = selectedValues.length > 0
-                        ? selectedValues.join(' ، ')
-                        : 'اختر اللغات';
+                        ? selectedValues.join(isAr ? ' ، ' : ', ')
+                        : (isAr ? 'اختر اللغات' : 'Select Languages');
                 }
             };
 
@@ -656,7 +662,7 @@ let currentStartDate = new Date('2026-03-09');
 
 function updateCalendarDemo(baseDate) {
     // جلب اسم الشهر بالعربي
-    const monthName = new Intl.DateTimeFormat('ar-EG', { month: 'long' }).format(baseDate);
+    const monthName = new Intl.DateTimeFormat(isAr ? 'ar-EG' : 'en-US', { month: 'long' }).format(baseDate);
     const year = baseDate.getFullYear();
 
     // حساب تاريخ نهاية الأسبوع (بعد 6 أيام)
@@ -665,7 +671,9 @@ function updateCalendarDemo(baseDate) {
 
     // تحديث العنوان الرئيسي
     if (calendarTitle) {
-        calendarTitle.textContent = `${baseDate.getDate()} - ${endDate.getDate()} ${monthName} _ ${year}`;
+        calendarTitle.textContent = isAr 
+            ? `${baseDate.getDate()} - ${endDate.getDate()} ${monthName} _ ${year}`
+            : `${monthName} ${baseDate.getDate()} - ${endDate.getDate()}, ${year}`;
     }
 
     // تحديث أرقام الأيام وتغيير حالة المواعيد عشوائياً
@@ -726,9 +734,13 @@ if (showMoreSlotsBtn) {
         this.classList.toggle('active');
         calendarBody.classList.toggle('show');
         if (calendarBody.classList.contains('show')) {
-            showMoreSlotsBtn.innerHTML = 'عرض أقل <i class="fa-solid fa-chevron-up"></i>';
+            showMoreSlotsBtn.innerHTML = isAr 
+                ? 'عرض أقل <i class="fa-solid fa-chevron-up"></i>' 
+                : 'Show Less <i class="fa-solid fa-chevron-up"></i>';
         } else {
-            showMoreSlotsBtn.innerHTML = 'عرض المزيد من المواعيد <i class="fa-solid fa-chevron-down"></i>';
+            showMoreSlotsBtn.innerHTML = isAr 
+                ? 'عرض المزيد من المواعيد <i class="fa-solid fa-chevron-down"></i>' 
+                : 'Show More Slots <i class="fa-solid fa-chevron-down"></i>';
         }
     });
 }
