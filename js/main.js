@@ -837,18 +837,34 @@ jQuery('.filter-item').on('click', function () {
 
 // Share Icon Toggle
 (function () {
-    const shareIcon = document.querySelector('.share-icon');
-    const shareOptions = document.querySelector('.share-options');
-    if (shareIcon && shareOptions) {
-        shareIcon.addEventListener('click', function () {
-            shareOptions.classList.toggle('active');
-        });
-        document.addEventListener('click', function (e) {
-            if (!shareIcon.contains(e.target) && !shareOptions.contains(e.target)) {
-                shareOptions.classList.remove('active');
+    const shareIcons = document.querySelectorAll('.share-icon');
+    
+    shareIcons.forEach(icon => {
+        icon.addEventListener('click', function (e) {
+            const options = this.querySelector('.share-options');
+            if (options) {
+                // Toggle if the click is on the icon itself, or a child that isn't the options menu
+                if (!e.target.closest('.share-options')) {
+                    options.classList.toggle('active');
+                    
+                    // Close all other share options
+                    document.querySelectorAll('.share-options').forEach(opt => {
+                        if (opt !== options) {
+                            opt.classList.remove('active');
+                        }
+                    });
+                }
             }
         });
-    }
+    });
+
+    document.addEventListener('click', function (e) {
+        if (!e.target.closest('.share-icon')) {
+            document.querySelectorAll('.share-options').forEach(opt => {
+                opt.classList.remove('active');
+            });
+        }
+    });
 
 })();
 
