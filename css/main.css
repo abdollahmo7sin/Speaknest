@@ -1105,6 +1105,7 @@ body.overflow-hidden {
 
     .share-icon {
       position: relative;
+      cursor: pointer;
 
       .share-options {
         position: absolute;
