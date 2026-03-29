@@ -1104,17 +1104,59 @@ body.overflow-hidden {
     margin-bottom: 16px;
 
     .share-icon {
+      position: relative;
+
+      .share-options {
+        position: absolute;
+        top: -5px;
+        inset-inline-end: 10px;
+        background: #fff;
+        border-radius: 10px;
+        padding: 10px;
+        display: flex;
+        gap: 14px;
+        z-index: 10;
+        transition: 0.3s;
+        opacity: 0;
+        visibility: hidden;
+
+        a {
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: var(--blue);
+          transition: 0.3s;
+
+          i {
+            font-size: 15px;
+          }
+
+          &:hover {
+            color: var(--orange) !important;
+
+            i {
+              color: var(--orange) !important;
+
+            }
+          }
+        }
+
+        &.active {
+          opacity: 1;
+          visibility: visible;
+          inset-inline-end: 30px;
+
+        }
+      }
+
       i {
         font-size: 24px;
         color: var(--blue);
         transition: 0.3s;
       }
 
-      &:hover {
-        i {
-          color: var(--orange);
-        }
-      }
+
     }
 
     img {
@@ -1132,6 +1174,15 @@ body.overflow-hidden {
     font-size: 20px;
     color: var(--text);
     margin-bottom: 16px;
+
+    a {
+      color: var(--text);
+      transition: 0.3s;
+
+      &:hover {
+        color: var(--orange) !important;
+      }
+    }
   }
 
   .teacher-speciality {
@@ -1601,6 +1652,12 @@ hr.red {
 
 .footer-menu {
   margin-bottom: 32px;
+
+  .phone {
+    a {
+      unicode-bidi: plaintext;
+    }
+  }
 
   @media only screen and (max-width: 600px) {
     gap: 20px !important;
@@ -4730,7 +4787,7 @@ hr.red {
 .login-rocket {
   position: absolute;
   bottom: 10px;
-  inset-inline-start: 60px;
+  right: 60px;
   z-index: 6;
   pointer-events: none;
   animation: rocketFloat 3s ease-in-out infinite;
@@ -4741,7 +4798,7 @@ hr.red {
 }
 
 .login-rocket img {
-  width: 180px;
+  width: 240px;
   height: auto;
   transform: rotate(-10deg);
 }

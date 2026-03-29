@@ -262,7 +262,7 @@ jQuery(document).ready(function () {
                 setTimeout(() => {
                     const successModal = bootstrap.Modal.getOrCreateInstance(successModalElement);
                     successModal.show();
-                    
+
                     // Start 3-second redirection timer
                     let timeLeft = 3;
                     const timerEl = document.getElementById('redirect-timer');
@@ -671,7 +671,7 @@ function updateCalendarDemo(baseDate) {
 
     // تحديث العنوان الرئيسي
     if (calendarTitle) {
-        calendarTitle.textContent = isAr 
+        calendarTitle.textContent = isAr
             ? `${baseDate.getDate()} - ${endDate.getDate()} ${monthName} _ ${year}`
             : `${monthName} ${baseDate.getDate()} - ${endDate.getDate()}, ${year}`;
     }
@@ -734,12 +734,12 @@ if (showMoreSlotsBtn) {
         this.classList.toggle('active');
         calendarBody.classList.toggle('show');
         if (calendarBody.classList.contains('show')) {
-            showMoreSlotsBtn.innerHTML = isAr 
-                ? 'عرض أقل <i class="fa-solid fa-chevron-up"></i>' 
+            showMoreSlotsBtn.innerHTML = isAr
+                ? 'عرض أقل <i class="fa-solid fa-chevron-up"></i>'
                 : 'Show Less <i class="fa-solid fa-chevron-up"></i>';
         } else {
-            showMoreSlotsBtn.innerHTML = isAr 
-                ? 'عرض المزيد من المواعيد <i class="fa-solid fa-chevron-down"></i>' 
+            showMoreSlotsBtn.innerHTML = isAr
+                ? 'عرض المزيد من المواعيد <i class="fa-solid fa-chevron-down"></i>'
                 : 'Show More Slots <i class="fa-solid fa-chevron-down"></i>';
         }
     });
@@ -833,3 +833,22 @@ jQuery('.filter-item').on('click', function () {
         });
     });
 })();
+
+
+// Share Icon Toggle
+(function () {
+    const shareIcon = document.querySelector('.share-icon');
+    const shareOptions = document.querySelector('.share-options');
+    if (shareIcon && shareOptions) {
+        shareIcon.addEventListener('click', function () {
+            shareOptions.classList.toggle('active');
+        });
+        document.addEventListener('click', function (e) {
+            if (!shareIcon.contains(e.target) && !shareOptions.contains(e.target)) {
+                shareOptions.classList.remove('active');
+            }
+        });
+    }
+
+})();
+
